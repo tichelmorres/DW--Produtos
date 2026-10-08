@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'Charter';
+  src: url('./assets/charter_regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: url('./assets/charter_bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+    --fg: #48463d;
+    --hg: #9d0006;
+    --bg: #c2bda6;
+    --ba: #b3ad91;
+    --ac: #2c85c8;
+    --aa: #8f3f71;
+}
+
+input, button {
+    all: unset;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Charter", "Bitstream Charter", "Sitka Text", "Cambria", Georgia, serif;;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+html, body, #content {
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+#pform {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+
+#pform > #fields {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 90px;
+
+    background-color: var(--ba);
+
+    border-radius: 8px;
+    padding: 8px;
+}
+
+#pform > #fields > #products {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: left;
+
+    color: var(--hg);
+    font-weight: bold;
+}
+
+#pform > #fields > #products > label:not(:nth-child(1)),
+#pform > #fields > #quantities > input:not(:nth-child(1)),
+#pform > #fields > #values > input:not(:nth-child(1)) {
+    margin-top: 10px;
+}
+
+#pform > #fields > #quantities,
+#pform > #fields > #values {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#pform > #fields > #quantities > input,
+#pform > #fields > #values > input {
+    text-align: center;
+
+    background-color: var(--fg);
+    color: var(--bg);
+
+    border-radius: 8px;
+    padding: 0px 8px;
+}
+
+#submit {
+    background-color: var(--aa);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 8px;
+
+    transition: background-color 0.5s ease;
+    transition: color 0.3s ease;
+}
+
+#submit:hover {
+    cursor: pointer;
+    text-decoration: underline;
+
+    background-color: #ffffff;
+    color: var(--aa);
+}
+
+#results {
+    margin-top: 30px;
+}
+
+.result > .rtxt {
+    font-weight: bold;
+    color: var(--ac);
+}
+
+.result > .rint {
+    font-weight: normal;
+    color: var(--fg);
+}

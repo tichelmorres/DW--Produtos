@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <main id="content">
+            <form id="pform">
+                <div id="fields">
+                    <div id="products">
+                        <label>MAÇÃ:</label>
+                        <label>BANANA:</label>
+                        <label>CACHO DE UVA:</label>
+                        <label>LIMÃO:</label>
+                        <label>LARANJA:</label>
+                    </div>
+                    <div id="quantities">
+                        <input type="number" id="apple-qnt" name="apple-qnt" placeholder="Quantidade" min="0" step="1" required>
+                        <input type="number" id="banana-qnt" name="banana-qnt" placeholder="Quantidade" min="0" step="1" required>
+                        <input type="number" id="grape-qnt" name="grape-qnt" placeholder="Quantidade" min="0" step="1" required>
+                        <input type="number" id="lemon-qnt" name="lemon-qnt" placeholder="Quantidade" min="0" step="1" required>
+                        <input type="number" id="orange-qnt" name="orange-qnt" placeholder="Quantidade" min="0" step="1" required>
+                    </div>
+                    <div id="values">
+                        <input type="number" id="apple-val" name="apple-val" placeholder="Valor (R$)" min="0" step="1" required>
+                        <input type="number" id="banana-val" name="banana-val" placeholder="Valor (R$)" min="0" step="1" required>
+                        <input type="number" id="grape-val" name="grape-val" placeholder="Valor (R$)" min="0" step="1" required>
+                        <input type="number" id="lemon-val" name="lemon-val" placeholder="Valor (R$)" min="0" step="1" required>
+                        <input type="number" id="orange-val" name="orange-val" placeholder="Valor (R$)" min="0" step="1" required>
+                    </div>
+                </div>
+                <button type="submit" id="submit">Calcular</button>
+            </form>
+            
+            <div id="results"></div>
+        </main>
+    </body>
+</html>
