@@ -114,13 +114,14 @@ html, body, #content {
 }
 
 #pform > #fields > #quantities > input,
-#pform > #fields > #values > input {
+#pform > #fields > #values > input,
+#pform > #fields > #discount > input {
     text-align: center;
 
     background-color: var(--fg);
     color: var(--bg);
 
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 0px 8px;
 }
 

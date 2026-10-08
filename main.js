@@ -12,6 +12,8 @@ form.addEventListener('submit', function(event) {
     const dataObj = Object.fromEntries(formData.entries());
 
     const products = ['apple', 'banana', 'grape', 'lemon', 'orange'];
+    const discount = parseInt(dataObj["discount"], 10) || 0;
+
     let total = 0;
 
     products.forEach(p => {
@@ -22,8 +24,7 @@ form.addEventListener('submit', function(event) {
         total += (qnt * val);
     });
 
-    // 5% discount
-    const withDiscount = total * 0.95;
+    const withDiscount = total * (1 - (discount/100));
 
     resultsDiv.innerHTML = `
         <div class="result"><span class="rtxt">Total s/ desconto:</span> <span class="rint">${formatarMoeda(total)}</span></div>
